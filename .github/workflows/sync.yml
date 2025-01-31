@@ -1,0 +1,12 @@
+name: Sync Bitbucket Changes
+
+on:
+  repository_dispatch:
+    types: [bitbucket_sync]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log that the workflow was triggered
+        run: echo "🚀 Bitbucket webhook successfully triggered this workflow!"
